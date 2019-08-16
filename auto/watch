@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+if [ ! -f ./bin/watch ]; then
+  mkdir -p ./bin
+  crystal build ./src/watch.cr -o ./bin/watch
+fi
+./bin/watch

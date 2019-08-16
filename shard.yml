@@ -1,0 +1,22 @@
+name: crystal-paint
+version: 0.1.0
+
+authors:
+  - klougod
+
+description: |
+  A ms-paint like editor
+
+dependencies:
+  lib_gl:
+    github: calebuharrison/LibGL
+    branch: master
+  crystglfw:
+    github: calebuharrison/CrystGLFW
+    branch: master
+
+development_dependencies:
+  watcher:
+    github: faustinoaq/watcher
+
+license: MIT

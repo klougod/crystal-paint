@@ -1,0 +1,4 @@
+#! /bin/bash -e
+
+mkdir -p ./bin
+crystal build ./src/main.cr -o ./bin/main
