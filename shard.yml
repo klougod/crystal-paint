@@ -12,7 +12,7 @@ dependencies:
     github: calebuharrison/LibGL
     branch: master
   crystglfw:
-    github: calebuharrison/CrystGLFW
+    github: klougod/CrystGLFW
     branch: master
 
 development_dependencies:

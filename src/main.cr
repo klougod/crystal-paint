@@ -7,7 +7,7 @@ include CrystGLFW
 
 class Main
 
-  @@window_width = 800
+  @@window_width = 1200
   @@window_height = 600
 
   def self.mb_cb(window : CrystGLFW::Window, xpos : Float64, ypos : Float64) : Nil
@@ -36,7 +36,9 @@ class Main
       window.on_resize do |event|
         @@window_width = event.size["width"]
         @@window_height = event.size["height"]
+        LibGL.viewport(0, 0, @@window_width, @@window_height)
         LibGL.clear(LibGL::COLOR_BUFFER_BIT | LibGL::DEPTH_BUFFER_BIT)
+        LibGL.flush
         window.swap_buffers
       end
 
