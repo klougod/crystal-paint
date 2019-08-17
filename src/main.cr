@@ -1,7 +1,8 @@
 require "lib_gl"
 require "lib_glfw"
 require "crystglfw"
-require "./helpers/constants"
+require "./poligons/point"
+require "./gui/gui_point"
 
 include CrystGLFW
 
@@ -49,10 +50,9 @@ class Main
           y = 0.0
           LibGLFW.get_cursor_pos(window.to_unsafe, pointerof(x), pointerof(y))
 
-          xpos = ((x-@@window_width/2)/@@window_width)*2
-          ypos = ((y-@@window_height/2)/@@window_height)*-2
+          point = GuiPoint.new(Point.new(x, y))
 
-          mb_cb(window, xpos, ypos)
+          point.draw_point(window)
         end  
       end
 
